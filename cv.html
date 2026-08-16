@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trent Liao · CV</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* CV：极简、流水账式记录，只用分隔线与两栏对齐 */
+    .cv-wrap { padding: 48px 24px 96px; }
+    .cv-page { max-width: 700px; margin: 0 auto; }
+
+    .cv-header { margin-bottom: 36px; }
+    .cv-header h1 { font-family: var(--font-serif); font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+    .cv-contact { margin-top: 8px; color: var(--muted); font-size: 14px; }
+
+    .cv-section { margin-bottom: 30px; }
+    .cv-section h2 {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .cv-item { display: flex; gap: 24px; margin-bottom: 11px; }
+    .cv-item:last-child { margin-bottom: 0; }
+    .cv-item-date { flex: 0 0 132px; color: var(--muted); font-size: 14px; padding-top: 2px; }
+    .cv-item-body { flex: 1; min-width: 0; }
+    .cv-item-title { font-weight: 600; font-size: 15.5px; }
+    .cv-item-place { color: var(--muted); font-size: 14px; }
+    .cv-item ul { list-style: none; margin-top: 4px; }
+    .cv-item li { font-size: 14.5px; }
+    .cv-item li + li { margin-top: 2px; }
+    .cv-item li::before { content: "–  "; color: var(--muted); }
+
+    .cv-skill { list-style: none; font-size: 14.5px; }
+    .cv-skill li + li { margin-top: 6px; }
+
+    .cv-tools { display: flex; gap: 16px; justify-content: center; margin-top: 40px; }
+    .cv-tools a { font-size: 14px; color: var(--muted); }
+    .cv-tools a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .cv-item { flex-direction: column; gap: 2px; }
+      .cv-item-date { flex: none; }
+    }
+
+    @media print {
+      .cv-tools { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-wrap">
+    <div class="cv-page">
+      <header class="cv-header">
+        <h1>Trent Liao</h1>
+        <p class="cv-contact">Zhuhai, China</p>
+      </header>
+
+      <section class="cv-section">
+        <h2>Education</h2>
+        <div class="cv-item">
+          <div class="cv-item-date">2025 – present</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">M.S., Electronic Information (AI)</div>
+            <div class="cv-item-place">Jinan University (211)</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2017 – 2021</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">B.S., Business Administration</div>
+            <div class="cv-item-place">Huazhong Agricultural University (211) · GPA 3.4/4.0, top 20%</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Projects</h2>
+        <div class="cv-item">
+          <div class="cv-item-date">2021 – 2022</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Farmers' straw-disposal behavior study</div>
+            <div class="cv-item-place">Research assistant · survey design, Excel / SPSS</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2019 – 2020</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Mathematical modeling</div>
+            <div class="cv-item-place">ARIMA time-series forecasting · team lead</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Work</h2>
+        <div class="cv-item">
+          <div class="cv-item-date">2022 – 2024</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Quality Engineer</div>
+            <div class="cv-item-place">Chaoying Electronic Circuit Co., Ltd.</div>
+            <ul>
+              <li>3+ customer test projects, 100% on-time delivery</li>
+              <li>2 process-improvement projects, first-pass yield up ~5%</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Activities</h2>
+        <div class="cv-item">
+          <div class="cv-item-date">2025 – present</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Graduate Student Union</div>
+            <div class="cv-item-place">Academic Science &amp; Technology Dept. · Jinan University</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2017 – 2019</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">University Art Troupe</div>
+            <div class="cv-item-place">WeChat account lead</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2018</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Hubei Marketing Challenge</div>
+            <div class="cv-item-place">Core planner</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Skills</h2>
+        <ul class="cv-skill">
+          <li><b>Programming</b> — Python (NumPy, Pandas, scikit-learn) for data analysis and modeling</li>
+          <li><b>Data &amp; statistics</b> — time-series forecasting (ARIMA), data cleaning and descriptive statistics (Excel, SPSS, R)</li>
+          <li><b>Typesetting</b> — LaTeX / Beamer for slide decks and lecture notes</li>
+          <li><b>Content</b> — WeChat account operation, editorial writing and visual design</li>
+          <li><b>English</b> — CET-4 553, fluent reading of academic literature</li>
+        </ul>
+      </section>
+
+      <section class="cv-section">
+        <h2>Awards</h2>
+        <div class="cv-item">
+          <div class="cv-item-date">2019</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Provincial Second Prize, CUMCM</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2020</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Third Prize, MCM/ICM</div>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-item-date">2018</div>
+          <div class="cv-item-body">
+            <div class="cv-item-title">Provincial Third Prize, Hubei Marketing Challenge</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cv-tools">
+      <a href="index.html">← Back to home</a>
+      <a href="#" onclick="window.print(); return false;">Print / Save as PDF</a>
+    </div>
+  </div>
+
+</body>
+</html>
