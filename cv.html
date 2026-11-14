@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // 尽早设置主题，避免刷新时闪白：优先已保存的选择，其次跟随系统
+    // 与 index.html 保持一致；本页不放切换按钮，主题由首页设置
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>Trent Liao · CV</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
   <link rel="stylesheet" href="style.css" />
@@ -52,6 +64,17 @@
     }
 
     @media print {
+      /* 屏幕显示跟随主题，但打印 / 另存 PDF 一律使用浅色，保证文字与背景可读 */
+      :root, [data-theme="dark"] {
+        --bg: #ffffff;
+        --nav-bg: #ffffff;
+        --bg-soft: #f7f8fa;
+        --text: #1a1a1a;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #1e40af;
+        --accent-soft: #eef2ff;
+      }
       .cv-tools { display: none; }
     }
   </style>
